@@ -186,36 +186,6 @@ const Bisection = () => {
                   Calculate
                 </Button>
               </div>
-              <div className="col-sm-6">
-                <div className="dropdown">
-                  <a
-                    className="btn btn-secondary dropdown-toggle"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Samples
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="dropdownMenuLink"
-                  >
-                    <li>
-                      <a className="dropdown-item" value="0" onClick={Sample}>
-                        Sample1
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" value="1" onClick={Sample}>
-                        Sample2
-                      </a>
-                    </li>
-                    {/* <li><a className="dropdown-item" value="2" onClick={Sample}>Sample3</a></li> */}
-                  </ul>
-                </div>
-              </div>
             </div>
           </Form>
         </div>

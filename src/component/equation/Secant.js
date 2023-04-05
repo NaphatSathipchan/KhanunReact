@@ -133,9 +133,6 @@ const Secant = () => {
                 onChange={inputEquation}
                 placeholder="Input f(x)"
               />
-              <Form.Text className="text-Muted">
-                สมการที่ดีคือ สมการที่สีเหลือง yellow
-              </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label> Input X0</Form.Label>
@@ -168,32 +165,6 @@ const Secant = () => {
                 >
                   Calculate
                 </Button>
-              </div>
-              <div className="col-sm-6">
-                <div className="dropdown">
-                  <a
-                    className="btn btn-secondary dropdown-toggle"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Samples
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="dropdownMenuLink"
-                  >
-                    <li>
-                      <a className="dropdown-item" value="0" onClick={Sample}>
-                        Sample1
-                      </a>
-                    </li>
-                    {/* <li><a className="dropdown-item" href="#">Sample2</a></li>
-                                <li><a className="dropdown-item" href="#">Sample3</a></li> */}
-                  </ul>
-                </div>
               </div>
             </div>
           </Form>

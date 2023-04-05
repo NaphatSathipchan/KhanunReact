@@ -9,13 +9,13 @@ import Newton_raphson from "./component/equation/Newton_raphson";
 import Secant from "./component/equation/Secant";
 import Taylor from "./component/equation/Taylor_series";
 import Cramer from "./component/matrix/Cramer";
-import Sumo from "./component/test/Sumo";
+import SumoNavbar from "./component/test/Sumo";
 import Siao from "./component/test/Siao";
 
 function App() {
   return (
     <div style={{ textAlignVertical: "center", textAlign: "center" }}>
-      <Sumo />
+      <SumoNavbar />
       <section>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-function BasicExample() {
+function SumoNavbar() {
   return (
     <Navbar bg="warning " expand="lg">
       <Container>
@@ -23,4 +23,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default SumoNavbar;
