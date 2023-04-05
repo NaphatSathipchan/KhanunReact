@@ -197,10 +197,7 @@ const Bisection = () => {
             Bisection Chart
           </h4>
           {Nodata == false && (
-            <img
-              src="https://cdn.discordapp.com/attachments/900255663081545761/1082615467186860084/Rolling-4.5s-200px_1.gif"
-              alt="Loading..."
-            />
+            <img src="https://i.gifer.com/VAyR.gif" alt="Loading..." />
           )}
           {Nodata && (
             <Myline
