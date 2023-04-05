@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content1 {
+    width: 50%;
+    order: 0;
+  }
+  
+  .content2 {
+    width: 50%;
+    order: 1;
+  }
+  

@@ -1,0 +1,43 @@
+[
+    {
+        "method": "Bisection",
+        "Equation": "(x^4)-13",
+        "XL": 0,
+        "XR": 5
+    },
+    {
+        "method": "Bisection",
+        "Equation": "x^2-4",
+        "XL": 5,
+        "XR": 10
+    },
+    {
+        "method": "FalsePosition",
+        "Equation": "(x^4)-13",
+        "XL": 0,
+        "XR": 5
+    },
+    {
+        "method": "FalsePosition",
+        "Equation": "x^2-4",
+        "XL": 5,
+        "XR": 10
+    },
+    {
+        "method": "Onepoint",
+        "Equation": "(((2*x)+5)/2)^(1/3)",
+        "X0": 5
+    },
+    {
+        "method": "Newtonraphson",
+        "Equation": "(x^4)-13",
+        "X0": 5
+    },
+    {
+        "method": "Secant",
+        "Equation": "(x^4)-13",
+        "X0": 5,
+        "X1": 10
+    }
+
+]

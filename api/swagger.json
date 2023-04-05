@@ -1,0 +1,117 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Numerical Methods API",
+    "description": "Test swagger แบบงงมากๆ",
+    "version": "beta 1.7.3"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/getsample/{path}": {
+      "get": {
+        "summary": "Get equations by method",
+        "description": "Returns equations that match the specified method.",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "description": "The method name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Equation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/testswagger": {
+      "get": {
+        "summary": "Test swagger",
+        "description": "Test Swagger endpoint with parameters",
+        "parameters": [
+          {
+            "name": "a",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "example": 112
+            },
+            "required": true
+          },
+          {
+            "name": "b",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "example": 44
+            },
+            "required": true
+          },
+          {
+            "name": "c",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "example": "prayut"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "tumak or lnwza"
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Equation": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the equation"
+          },
+          "method": {
+            "type": "string",
+            "description": "The method used to solve the equation"
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief description of the equation"
+          }
+        }
+      }
+    }
+  }
+}

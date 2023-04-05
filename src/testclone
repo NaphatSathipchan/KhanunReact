@@ -1,0 +1,23 @@
+<>
+      <Container>
+        <Row>
+          <Col>
+            <Button>Push</Button>
+          </Col>
+          <Col>
+            <Image src="https://example.com/my-image.jpg" />
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <Col>
+            <Button>Push</Button>
+          </Col>
+          <Col>
+            <Image src="https://example.com/my-image.jpg" />
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
