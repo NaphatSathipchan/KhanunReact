@@ -24,6 +24,7 @@ function App() {
           <Route path="/Siao" element={<Siao />} />
           <Route path="/FalsePosition" element={<FalsePosition />} />
           <Route path="/Newton_raphson" element={<Newton_raphson />} />
+          <Route path="/Secant" element={<Secant />} />
         </Routes>
       </section>
     </div>
