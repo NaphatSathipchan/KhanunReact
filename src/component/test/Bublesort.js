@@ -2,15 +2,13 @@ import "./styles.css";
 import React, { useState, useEffect } from "react";
 
 function Bubblesort() {
-  var [array, setArray] = useState([array]);
-  var [sortHistory, setSortHistory] = useState([[...array]]);
-  const [playing, setPlaying] = useState(false);
+  var [array, setArray] = useState([]);
+  const [siao, setsiao] = useState(false);
   var size = array.length;
 
-  console.log(array, sortHistory);
-
-  const play = () => {
-    setPlaying(true);
+  const Bigpom = () => {
+    setsiao(true);
+    console.log("siao=", siao);
   };
 
   const handleChange = (e) => {
@@ -19,25 +17,27 @@ function Bubblesort() {
   };
 
   const bubblesort = () => {
-    var historyArray = [[array]];
+    var historyArray = [[...array]];
+
     for (let i = 0; i < size - 1; i++) {
       for (let j = 0; j < size - i - 1; j++) {
         if (array[j] > array[j + 1]) {
           var temp = array[j];
           array[j] = array[j + 1];
           array[j + 1] = temp;
-          historyArray.push([array]);
+          historyArray.push([...array]);
+
+          console.log("history= ", historyArray);
         }
       }
     }
-    setSortHistory(historyArray);
-    play();
+    Bigpom();
   };
 
   return (
     <div>
       <div className="container">
-        <label className="label">Enter the values as array</label>
+        <label className="label">ทพจร</label>
         <input className="input" type="text" onChange={handleChange} />
         <button className="button" onClick={() => bubblesort()}>
           sort
