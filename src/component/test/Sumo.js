@@ -16,6 +16,7 @@ function SumoNavbar() {
             <Nav.Link href="/FalsePosition">FalsePosition</Nav.Link>
             <Nav.Link href="/Newton_raphson">Newton_raphson</Nav.Link>
             <Nav.Link href="/Secant">Secant</Nav.Link>
+            <Nav.Link href="/Bublesort">Bublesort</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

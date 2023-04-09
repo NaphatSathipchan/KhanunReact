@@ -11,7 +11,7 @@ import Taylor from "./component/equation/Taylor_series";
 import Cramer from "./component/matrix/Cramer";
 import SumoNavbar from "./component/test/Sumo";
 import Siao from "./component/test/Siao";
-
+import Bublesort from "./component/test/Bublesort";
 function App() {
   return (
     <div style={{ textAlignVertical: "center", textAlign: "center" }}>
@@ -25,6 +25,7 @@ function App() {
           <Route path="/FalsePosition" element={<FalsePosition />} />
           <Route path="/Newton_raphson" element={<Newton_raphson />} />
           <Route path="/Secant" element={<Secant />} />
+          <Route path="/Bublesort" element={<Bublesort />} />
         </Routes>
       </section>
     </div>
