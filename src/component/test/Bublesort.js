@@ -1,48 +1,42 @@
-import "./styles.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function Bubblesort() {
-  var [array, setArray] = useState([]);
-  const [siao, setsiao] = useState(false);
-  var size = array.length;
-
-  const Bigpom = () => {
-    setsiao(true);
-    console.log("siao=", siao);
-  };
-
-  const handleChange = (e) => {
+const Bublesort = () => {
+  const [array, setArray] = useState([]);
+  const [darray, setDArray] = useState([[...array]]);
+  const [sort, setSort] = useState(false);
+  const Size = array.length;
+  const HandleChange = (e) => {
     var str = e.target.value;
     setArray(str.split(",").map((i) => Number(i)));
+    console.log("Array=", array);
+  };
+  const Tt = () => {
+    setSort(true);
   };
 
-  const bubblesort = () => {
-    var historyArray = [[...array]];
-
-    for (let i = 0; i < size - 1; i++) {
-      for (let j = 0; j < size - i - 1; j++) {
+  const Bublesort = () => {
+    const AA = [...array];
+    for (let i = 0; i < Size - 1; i++) {
+      for (let j = 0; j < Size - i - 1; j++) {
         if (array[j] > array[j + 1]) {
           var temp = array[j];
           array[j] = array[j + 1];
           array[j + 1] = temp;
-          historyArray.push([...array]);
-
-          console.log("history= ", historyArray);
+          AA.push(...array);
+          console.log("Array2=", array);
         }
       }
     }
-    Bigpom();
+    setDArray(AA);
+    Tt();
   };
 
   return (
     <div>
-      <div className="container">
-        <label className="label">ทพจร</label>
-        <input className="input" type="text" onChange={handleChange} />
-        <button className="button" onClick={() => bubblesort()}>
-          sort
-        </button>
-      </div>
+      <input type="text" onChange={HandleChange} />
+      <button type="button" onClick={Bublesort}>
+        sss
+      </button>
       <div style={{ textAlign: "center" }}>
         {array.map((element) => (
           <div className="App" style={{ height: (element + 1) * 10 }}>
@@ -52,5 +46,6 @@ function Bubblesort() {
       </div>
     </div>
   );
-}
-export default Bubblesort;
+};
+
+export default Bublesort;

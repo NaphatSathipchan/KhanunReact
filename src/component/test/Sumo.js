@@ -1,9 +1,8 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
-function SumoNavbar() {
+function SNavbar() {
   return (
     <Navbar bg="warning " expand="lg">
       <Container>
@@ -17,6 +16,7 @@ function SumoNavbar() {
             <Nav.Link href="/Newton_raphson">Newton_raphson</Nav.Link>
             <Nav.Link href="/Secant">Secant</Nav.Link>
             <Nav.Link href="/Bublesort">Bublesort</Nav.Link>
+            <Nav.Link href="/Box">Box</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -24,4 +24,4 @@ function SumoNavbar() {
   );
 }
 
-export default SumoNavbar;
+export default SNavbar;
