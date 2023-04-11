@@ -16,7 +16,10 @@ function Box() {
     }
     console.log("t=", t);
     console.log("t2=", t2);
-  });
+    setRight(t);
+    setLeft(t2);
+  }, [input]);
+  console.log("inputt=", input);
 
   const Eqq = (e) => {
     var c = e.target.value;
@@ -29,7 +32,36 @@ function Box() {
     console.log("count=", countt);
   };
 
-  const Eva = () => {};
+  const TableA = () => {
+    return left.map((item, index) => {
+      return (
+        <div>
+          <input placeholder={`${left[index]}`} />
+        </div>
+      );
+    });
+  };
+  const TableB = () => {
+    return right.map((item, index) => {
+      return (
+        <div>
+          <input placeholder={`${right[index]}`} />
+        </div>
+      );
+    });
+  };
+
+  const Eva = () => {
+    let t = left.map((item, index) => {
+      var value = item;
+      var ans = evaluate(eq, { x: value });
+      const obj = {
+        evaluate: ans,
+      };
+      return ans;
+    });
+    setRight(t);
+  };
 
   return (
     <div>
@@ -37,11 +69,18 @@ function Box() {
       <br />
       <input type="text" onChange={Cow}></input>
       <br />
-      <div style={{ display: "inline block" }}></div>
-      <div style={{ display: "inline block" }}></div>
-
-      <button onClick={Eva}>ss</button>
+      <button onClick={Eva}>Calculate</button>
       <br />
+      <div
+        style={{
+          display: "flex",
+
+          justifyContent: " center",
+        }}
+      >
+        <div style={{ display: "inline block" }}>{TableA()}</div>
+        <div style={{ display: "inline block" }}>{TableB()}</div>
+      </div>
     </div>
   );
 }
