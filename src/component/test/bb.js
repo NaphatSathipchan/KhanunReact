@@ -1,85 +1,49 @@
-import React, { useState, useEffect } from "react";
+import react, { useState, useEffect } from "react";
 import { count, evaluate } from "mathjs";
 
-const Box = () => {
-  const [input, setInput] = useState(0);
-  const [Equation, setEquation] = useState("x^2+3");
-  const [final, setFinal] = useState([]);
-  const [sai, setSai] = useState([]);
+function Box() {
+  const [input, setInput] = useState([]);
+  const [eq, setEq] = useState();
+  const [left, setLeft] = useState([]);
+  const [right, setRight] = useState([]);
 
   useEffect(() => {
-    let temp = [];
+    let t = [];
+    let t2 = [];
     for (let i = 0; i < input; i++) {
-      temp.push(0);
+      t.push(0);
+      t2.push(i + 1);
     }
-    console.log(temp, input);
+    console.log("t=", t);
+    console.log("t2=", t2);
+  });
 
-    setFinal(temp);
-    setSai(temp);
-  }, [input]);
-
-  const countBox = (event) => {
-    var count = Number(event.target.value);
-    setInput(count);
+  const Eqq = (e) => {
+    var c = e.target.value;
+    setEq(c);
+    console.log("c=", c);
+  };
+  const Cow = (e) => {
+    var countt = Number(e.target.value);
+    setInput(countt);
+    console.log("count=", countt);
   };
 
-  const Equationn = (event) => {
-    var count = event.target.value;
-    setEquation(count);
-  };
-
-  const calculateRoot = () => {
-    let temp = sai.map((item, index) => {
-      var value = item;
-      var ans = evaluate(Equation, { x: value });
-      const obj = {
-        evaluate: ans,
-      };
-      return ans;
-    });
-    console.log(temp);
-
-    setFinal(temp);
-  };
-
-  const inputValue = (event, index) => {
-    let value = Number(event.target.value);
-    let temp = JSON.parse(JSON.stringify(sai));
-    temp[index] = value;
-    setSai(temp);
-  };
-
-  const Gentable = () => {
-    return sai.map((item, index) => {
-      return (
-        <div>
-          <input key={index} onChange={(e) => inputValue(e, index)} />
-        </div>
-      );
-    });
-  };
-
-  const GentableY = () => {
-    return final.map((item, index) => {
-      return (
-        <div>
-          <input placeholder={`${final[index]}`} />
-        </div>
-      );
-    });
-  };
+  const Eva = () => {};
 
   return (
     <div>
-      <input onChange={Equationn}></input>
+      <input type="text" onChange={Eqq}></input>
       <br />
-      <input onChange={countBox}></input>
-      <br></br>
-      <div style={{ display: "inline-block" }}>{Gentable()}</div>
-      <div style={{ display: "inline-block" }}>{GentableY()}</div>
-      <button onClick={calculateRoot}>Calculate</button>
+      <input type="text" onChange={Cow}></input>
+      <br />
+      <div style={{ display: "inline block" }}></div>
+      <div style={{ display: "inline block" }}></div>
+
+      <button onClick={Eva}>ss</button>
+      <br />
     </div>
   );
-};
+}
 
 export default Box;
