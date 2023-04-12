@@ -9,6 +9,8 @@ import SNavbar from "./component/test/Sumo";
 import Siao from "./component/test/Siao";
 import Bublesort from "./component/test/Bublesort";
 import Box from "./component/test/bb";
+import Chart from "./component/test/Chart";
+
 function App() {
   return (
     <div style={{ textAlignVertical: "center", textAlign: "center" }}>
@@ -24,6 +26,7 @@ function App() {
           <Route path="/Bublesort" element={<Bublesort />} />
           <Route path="/Newton_raphson" element={<Newton_raphson />} />
           <Route path="/Box" element={<Box />} />
+          <Route path="/Chart" element={<Chart />} />
         </Routes>
       </section>
     </div>

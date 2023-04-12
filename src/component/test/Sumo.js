@@ -17,6 +17,7 @@ function SNavbar() {
             <Nav.Link href="/Secant">Secant</Nav.Link>
             <Nav.Link href="/Bublesort">Bublesort</Nav.Link>
             <Nav.Link href="/Box">Box</Nav.Link>
+            <Nav.Link href="/Chart">Chart</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
